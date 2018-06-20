@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-/**
- * Created by Dorota on 2016-12-25.
- */
+
 
 public class Team {
 
@@ -124,22 +122,22 @@ public class Team {
                         MatchUp[j] = buf[i];
                         formation_flags[j] = true;
                         found =true;
-                        //      System.out.println("Znaleziono pozycję dla gracza: "+MatchUp[j].getName()+MatchUp[j].getSurname());
+                       
                         break;
                     }
-                    //      System.out.println("Znaleziono pozycję dla gracza: "+buf[i].getName()+buf[i].getSurname()+" ale jest zajęta, szukam dalej");
+                
                 }
             }
             if (found==false){
                 missings.add(buf[i]);
-                //       System.out.println("Nie znaleziono pozycji dla gracza: "+buf[i].getName()+" "+buf[i].getSurname());
+               
             }
             found =false;
         }
 
 
         for (int i=0 ; i<11; i++){
-            // System.out.println(MatchUp[i].getNumber()+"."+MatchUp[i].getName()+" "+MatchUp[i].getSurname()+formation.getPosition(i).getWing()+formation.getPosition(i).getLine());
+         
             if(formation_flags[i]==false){
                 notUsedPosition.add(i);
             }
@@ -173,7 +171,7 @@ public class Team {
             found=false;
         }
         for(int i=0; i<11; i++){
-            //    System.out.println(MatchUp[i].getNumber()+"."+MatchUp[i].getName()+" "+MatchUp[i].getSurname()+formation.getPosition(i).getWing()+formation.getPosition(i).getLine());
+         
             if(MatchUp[i].getSurname()=="" && MatchUp[i].getName()==""){
                 checker++;
             }
@@ -238,7 +236,7 @@ public class Team {
 
 
         for (int i=0 ; i<11; i++){
-            //       System.out.println(MatchUp[i].getNumber()+"."+MatchUp[i].getName()+" "+MatchUp[i].getSurname()+formation.getPosition(i).getWing()+formation.getPosition(i).getLine());
+          
             if(MatchUp[i].getSurname()=="" && MatchUp[i].getName()==""){
                 notUsedPosition.add(i);
             }
@@ -291,19 +289,19 @@ public class Team {
             formation_flags[i]=false;
         }
         for(int i=0; i<notUsedPosition.size(); i++){
-            // System.out.println("Szukanie pozycji dla zawodnika: "+missings.get(i).getName()+" "+missings.get(i).getSurname());
+            
             for(int j=0 ; j<notUsedPosition.size(); j++) {
                 if (formation_flags[j]==false){
                     MatchUp[(notUsedPosition.get(j))]=missings.get(i);
-                    //  System.out.println("Znaleziono! Pozycja "+notUsedPosition.get(j)+"dla "+missings.get(i).getName()+" "+missings.get(i).getSurname());
+                  
                     formation_flags[j]=true;
                     found=true;
                     break;
                 }
-                //   System.out.println("Pozycja zajęta, szukam innej");
+              
             }
             if(found==false){
-                //   System.out.println("Nie znaleziono pozycji dla " + missings.get(i).getName() + " " + missings.get(i).getSurname());
+             
                 missings.add(missings.get(i));
             }
             found=false;
