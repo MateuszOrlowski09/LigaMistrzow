@@ -1,6 +1,4 @@
-/**
- * Created by Daniel on 06.05.2017.
- */
+
 public class Position {
     private String line;
     private String wing;
