@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 import oracle.jrockit.jfr.JFR;
 
@@ -17,9 +13,7 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
     private Team player;
     private ArrayList<Formation> formations;
     private JLabel[] players =new JLabel[121];
-    /**
-     * Creates new form LigaMistrzowGUI2
-     */
+   
     public LigaMistrzowGUI2(){
         initComponents();
 
@@ -933,7 +927,7 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
         jButton3.setText("Set Formation");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //        jButton3ActionPerformed(evt);
+             
             }
         });
 
@@ -1557,23 +1551,23 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
         jTabbedPane1.getAccessibleContext().setAccessibleName("player1");
 
         pack();
-    }// </editor-fold>
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
+        
         player.substitution(player.getSub(jList2.getSelectedIndex()),player.getMatchUp2(jList1.getSelectedIndex()));
         setLabelsx();
         showTeam();
     }
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
-        // TODO add your handling code here:
-        // player2.setText("dokeokeo");
+       
+     
         showTeam();
         player.setFormation(formations.get((jList3.getSelectedIndex())));
     }
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt, int x) {
-        // TODO add your handling code here:
+      
         System.out.println(x);
         player.setFormation(formations.get(x));
         player.setUp(false);
@@ -1584,16 +1578,7 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
         int[] score=new int[2];
         Team tx=player;
         int[] indexes= new int[]{0,1,2,3};
-        /*
-        for(int i=0; i<4; i++){
-            if(teams[i].hashCode()==player.hashCode()){
-               if(i==2 || i==3){
-                   indexes[0]=2; indexes[1]=3; indexes[2]=0; indexes[3]=1;
-                   order=false;
-               }
-            }
-        }
-        */
+       
 
         score=player.PlayMatch(enemy, 90);
         jTextArea1.setText(player.getName()+"                              "+enemy.getName()+"\n");
@@ -1616,15 +1601,9 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
         super.dispose();
     }
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+       
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -1641,9 +1620,9 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LigaMistrzowGUI2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+     
 
-        /* Create and display the form */
+      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new LigaMistrzowGUI2().setVisible(true);
@@ -1651,7 +1630,7 @@ class LigaMistrzowGUI2 extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify
+  
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
