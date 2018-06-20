@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -51,7 +47,7 @@ class LigaMistrzowGUI extends javax.swing.JFrame {
 
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">
+   
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -107,26 +103,10 @@ class LigaMistrzowGUI extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
 
-    /*
-        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-            // TODO add your handling code here:
-            System.out.println(findTeam(druzyna).getName());
-            Group g1=findTeam(druzyna);
-            System.out.println();
-            setGroups(teams);
-            jLabel3.setText(druzyna);
-            setTeamMatchUp(findTeam2(druzyna));
-            setLabels(g1);
-            setTable(g1);
-            jButton2.setVisible(true);
-            jButton1.setEnabled(false);
-            jComboBox1.setEnabled(false);
-            jLabel2.setText("Team selected:");
-        }
-     */
+  
     private void  jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         LigaMistrzowGUI2 window2= new LigaMistrzowGUI2(findTeam2(teams[(jComboBox1.getSelectedIndex())].getName()),findTeam2(teams[(jComboBox2.getSelectedIndex())].getName()),formations);
         window2.setVisible(true);
@@ -137,10 +117,7 @@ class LigaMistrzowGUI extends javax.swing.JFrame {
 
     public static void main(String args[]) {
 
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
+       
         Position GK = new Position("GK","C","D");
         Position CB = new Position("B","C","D");
         Position RB = new Position("B","R","D");
@@ -656,7 +633,7 @@ class LigaMistrzowGUI extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(LigaMistrzowGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+     
 
 
         java.awt.EventQueue.invokeLater(new Runnable() {
