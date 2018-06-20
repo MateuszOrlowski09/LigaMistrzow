@@ -1,6 +1,3 @@
-/**
- * Created by Dorota on 2016-12-25.
- */
 
 public class Player {
 
